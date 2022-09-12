@@ -1,15 +1,12 @@
-import sqlite3
 from empleado import Empleado
 from base import Base
-
-conexion = sqlite3.connect("practica_ingresardatos\databaseEmpleado.sqlite")
-cursor = conexion.cursor()
 
 print("------------MENU-----------")
 print("1-INGRESAR NUEVO EMPLEADO--")
 print("2-MODIFICAR EMPLEADO-------")
 print("3-BORRAR EMPLEADO----------")
-print("4-MOSTRAR EMPLEADOS--------")
+print("4-BORRAR EMPLEADOS---------")
+print("5-MOSTRAR EMPLEADOS--------")
 print("0-SALIR--------------------")
 
 opcion = input("\n--INGRESAR OPCION DESEADA--\n")
@@ -22,6 +19,8 @@ elif(opcion=="2"):
 elif(opcion=="3"):
     pass
 elif(opcion=="4"):
+    Base.borrarEmpleadosBase()
+elif(opcion=="5"):
     Base.mostrarEmpleadosBase()
 elif(opcion=="0"):
-    pass
+    exit()
