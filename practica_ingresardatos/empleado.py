@@ -1,6 +1,6 @@
 from persona import Persona
 from base import Base
-from ingresoDatos import IngresoDatos as ingd
+#from ingresoDatos import IngresoDatos as ingd
 
 class Empleado(Persona):
     def __init__(self, nombre, apellido, edad, dni, sector, puesto):
