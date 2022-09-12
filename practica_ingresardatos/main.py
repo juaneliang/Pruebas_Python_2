@@ -1,3 +1,4 @@
+import os
 from empleado import Empleado
 from base import Base
 
@@ -17,10 +18,10 @@ if(opcion=="1"):
 elif(opcion=="2"):
     pass
 elif(opcion=="3"):
-    pass
+    Base.borrarEmpleadoBase()
 elif(opcion=="4"):
     Base.borrarEmpleadosBase()
 elif(opcion=="5"):
     Base.mostrarEmpleadosBase()
 elif(opcion=="0"):
-    exit()
+    os.close()
