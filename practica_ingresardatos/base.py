@@ -9,7 +9,7 @@ class Base():
     def crearEmpleadoBase(nombre, apellido, edad, dni, sector, puesto):
         conexion = Base.dameConexion()
         cursor = conexion.cursor()
-        cursor.execute(f"INSERT INTO empleados (nombre, apellido, edad, dni, sector, puesto) VALUES ({nombre}, {apellido}, {edad}, {dni}, {sector}, {puesto})")
+        cursor.execute(f"INSERT INTO empleados (nombre, apellido, edad, dni, sector, puesto) VALUES ('{nombre}', '{apellido}', {edad}, {dni}, '{sector}', '{puesto}')")
         conexion.commit()
         conexion.close()
 
