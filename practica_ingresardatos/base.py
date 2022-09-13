@@ -42,7 +42,7 @@ class Base():
         conexion.commit()
         conexion.close()
     
-    
+    #Funciona OK
     def mostrarEmpleadoBase():
         conexion = Base.dameConexion() 
         cursor = conexion.cursor()
@@ -64,5 +64,3 @@ class Base():
         for e in empleados:
             print(e)
         conexion.close()
-
- 

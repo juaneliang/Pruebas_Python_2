@@ -4,3 +4,4 @@
 #3- Dni: que tenga 8 caracteres como minimo y como maximo. 
 #4- Edad: que sea mayor a 0, y que maximo sea 120.
 #5- Luego de ingresar los datos para nuevo/modificar/borrar que haya un Y/N para confirmar
+                                   
