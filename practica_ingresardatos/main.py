@@ -19,8 +19,7 @@ while(True):
         empleadoNuevo = Empleado.crearEmpleado()
         empleadoNuevo.mostrarEmpleado()
     elif(opcion=="2"):
-        while(opcionMod!="0"):
-            opcionMod = input("\n--INGRESAR OPCION DESEADA--\n")
+        while(True):
             print("------------MENU-----------")
             print("1-NOMBRE-------------------")
             print("2-APELLIDO-----------------")
@@ -29,17 +28,20 @@ while(True):
             print("5-SECTOR-------------------")
             print("6-PUESTO-------------------")
             print("0-SALIR--------------------")
-            if(opcion=="1"):
+            
+            opcionMod = input("\n--INGRESAR OPCION DESEADA--\n")
+            
+            if(opcionMod=="1"):
                 pass
-            elif(opcion=="2"):
+            elif(opcionMod=="2"):
                 pass
-            elif(opcion=="3"):
+            elif(opcionMod=="3"):
                 pass
-            elif(opcion=="4"):
+            elif(opcionMod=="4"):
                 pass
-            elif(opcion=="5"):
+            elif(opcionMod=="5"):
                 pass
-            elif(opcion=="6"):
+            elif(opcionMod=="6"):
                 pass
     elif(opcion=="3"):
         Base.borrarEmpleadoBase()
