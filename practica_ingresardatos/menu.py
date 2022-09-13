@@ -22,7 +22,7 @@ class Menu():
                 empleadoNuevo = Empleado.crearEmpleado()
                 empleadoNuevo.mostrarEmpleado()
             elif(opcion=="2"):
-                pass
+                Menu.menuSecMod()
             elif(opcion=="3"):
                 Base.borrarEmpleadoBase()
             elif(opcion=="4"):
@@ -59,3 +59,5 @@ class Menu():
                 pass
             elif(opcionMod=="6"):
                 pass
+            elif(opcionMod=="0"):
+                Menu.menuPrinc()
