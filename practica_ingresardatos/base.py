@@ -11,7 +11,8 @@ class Base():
     def crearEmpleadoBase(nombre, apellido, edad, dni, sector, puesto):
         conexion = Base.dameConexion()
         cursor = conexion.cursor()
-        cursor.execute(f"INSERT INTO empleados VALUES ('{nombre}', '{apellido}', {edad}, {dni}, '{sector}', '{puesto}');")
+        list_empleado = [nombre, apellido, edad, dni, sector, puesto]
+        cursor.execute(f"INSERT INTO empleados VALUES(?,?,?,?,?,?)", list_empleado)
         conexion.commit()
         conexion.close()
 
@@ -61,6 +62,9 @@ class Base():
         cursor = conexion.cursor()
         cursor.execute(f"SELECT * FROM empleados;")
         empleados = cursor.fetchall()
+        print(f"\nEstos son todos los empleados registrados: \n ")
+        i = 0
         for e in empleados:
-            print(e)
+            i =+ 1
+            print(f"Registro #{i}: {e}")
         conexion.close()
