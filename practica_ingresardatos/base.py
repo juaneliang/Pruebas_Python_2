@@ -60,9 +60,11 @@ class Base():
     def mostrarEmpleadosBase():
         conexion = Base.dameConexion() 
         cursor = conexion.cursor()
-        print("\nEstos son todos los empleados: \n  ")
         cursor.execute(f"SELECT * FROM empleados;")
         empleados = cursor.fetchall()
+        print(f"\nEstos son todos los empleados registrados: \n ")
+        i = 0
         for e in empleados:
-            print(e)
+            i =+ 1
+            print(f"Registro #{i}: {e}")
         conexion.close()
